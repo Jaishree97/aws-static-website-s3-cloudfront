@@ -62,6 +62,7 @@ This project demonstrates how to host a highly available, secure, and globally d
 
 \- Custom Domain: https://jaishreechaure.com
 
+\- Custom Sub Domain: https:www//jaishreechaure.com
 
 
 \## Learning Outcome
