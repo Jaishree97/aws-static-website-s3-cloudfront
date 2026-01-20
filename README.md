@@ -1,89 +1,106 @@
-### **AWS Static Website using S3 \& CloudFront**
+# AWS Static Website Hosting using Amazon S3 & CloudFront
 
+## Project Overview
+This project demonstrates how to design, deploy, and manage a secure, highly available, and globally distributed static website using core AWS services.  
+The website is hosted on Amazon S3, delivered via Amazon CloudFront, secured with HTTPS using AWS Certificate Manager (ACM), and connected to a custom domain.
 
+This project was created as a **hands-on AWS portfolio project** to gain real-world cloud deployment experience.
 
-\# AWS Static Website Hosting using S3, CloudFront \& Route 53
+---
 
+## Architecture
+User Browser  
+→ CloudFront (CDN + HTTPS)  
+→ Amazon S3 (Static Website Files)
 
+---
 
-This project demonstrates how to host a highly available, secure, and globally distributed static website using core AWS services.
+## AWS Services Used
+- Amazon S3 – Static website hosting
+- Amazon CloudFront – Global content delivery (CDN)
+- AWS Certificate Manager (ACM) – SSL/TLS certificate
+- IAM – Secure access management
+- AWS CLI – Deployment and cache invalidation
+- Git & GitHub – Version control and documentation
 
+> **Note:** Domain DNS is managed using a third-party provider (Hostinger). Route 53 concepts were understood but not used directly in this deployment.
 
+---
 
-\## Architecture
+## Features
+- Static website hosting on Amazon S3
+- Global content delivery using CloudFront
+- HTTPS enabled with ACM
+- Custom domain and subdomain configuration
+- CloudFront cache invalidation for updates
+- Version-controlled source code using GitHub
 
-\- Amazon S3 for static website hosting
+---
 
-\- Amazon CloudFront for global content delivery
+## Implementation Steps
+1. Created and configured an Amazon S3 bucket for static website hosting
+2. Uploaded website files (HTML, CSS, assets)
+3. Created a CloudFront distribution with S3 as origin
+4. Requested SSL certificate using ACM (us-east-1)
+5. Validated domain ownership via DNS
+6. Attached SSL certificate to CloudFront
+7. Configured custom domain DNS records
+8. Deployed updates using AWS CLI
+9. Managed project source code using Git & GitHub
 
-\- AWS Certificate Manager (ACM) for SSL/TLS
+---
 
-\- Amazon Route 53 for domain management
+## Live URLs
+- CloudFront URL: https://d24funs0xq7i16.cloudfront.net  
+- Custom Domain: https://jaishreechaure.com  
+- Subdomain: https://www.jaishreechaure.com  
 
-\- HTTPS enabled using CloudFront
+---
 
+## Project Screenshots
 
+### Architecture Diagram
+![Architecture Diagram](screenshots/architecture.png)
 
-\## Features
+### Amazon S3 Static Website Hosting
+![S3 Static Hosting](screenshots/static-website-hosting.png)
 
-\- Static website hosted on Amazon S3
+### Amazon S3 Bucket Objects
+![S3 Bucket Objects](screenshots/bucket-objects.png)
 
-\- CloudFront CDN for low-latency access
+### CloudFront Distribution
+![CloudFront Distribution](screenshots/cloudfront-distribution.png)
 
-\- Custom domain configuration
+### SSL Certificate (AWS Certificate Manager)
+![ACM Certificate](screenshots/acm-certificate.png)
 
-\- HTTPS using ACM certificate
+### Route 53 Hosted Zone (Learning Reference)
+![Route 53 Hosted Zone](screenshots/route-53-hosted-zone.png)
 
-\- Cache invalidation for content updates
+### Live Website (CloudFront URL)
+![Live Website CloudFront](screenshots/output-cloudfront-live.png)
 
-\- Version-controlled using Git \& GitHub
-
-
-
-\## AWS Services Used
-
-\- Amazon S3
-
-\- Amazon CloudFront
-
-\- AWS Certificate Manager (ACM)
-
-\- Amazon Route 53
-
-\- IAM
-
-\- Git \& GitHub
-
-
-
-\## Live URLs
-
-\- CloudFront URL: https://d24funs0xq7i16.cloudfront.net
-
-\- Custom Domain: https://jaishreechaure.com
-
-\- Custom Sub Domain: https://www.jaishreechaure.com
-
-
-\## Learning Outcome
-
-\- Understanding of static website hosting on AWS
-
-\- Hands-on experience with DNS, CDN, and SSL
-
-\- Real-world deployment using AWS best practices
-
-\- Git-based project version control
-
+### Live Website (Custom Domain)
+![Live Website Custom Domain](screenshots/output-https-www-live.png)
 
 
 ---
 
+## Learning Outcomes
+- Practical understanding of static website hosting on AWS
+- Hands-on experience with CDN, DNS, and SSL/TLS
+- Real-world AWS deployment workflow
+- Git-based version control and documentation
+- Cloud cost awareness and resource cleanup practices
 
+---
 
-\*\*Author:\*\* Jaishree Chaure  
+## Cost Optimization Note
+To avoid unnecessary AWS charges, cloud resources for this project may be stopped or deleted when not actively in use.  
+All architecture, deployment steps, and screenshots are documented in this repository.
 
-\*\*Project Type:\*\* AWS Hands-on / Portfolio Project
+---
 
-
-
+## Author
+**Jaishree Chaure**  
+AWS Hands-on Portfolio Project
